@@ -1,13 +1,15 @@
+import { ComponentProps, ReactNode } from "react"
+
 // configurando a tipagem dos props
-interface ButtonProps {
-    text: string
-}
+// ComponentProps = extende TODOS os atributos de certa tag
+interface ButtonProps extends ComponentProps<"button"> {}
 
 const Button = (props: ButtonProps) => {
     return (
-        <button className="bg-violet-500 px-5 py-2 rounded-sm">
-            {props.text || "Enviar"}
-        </button>
+        <button 
+            className="flex justify-between items-center px-5 h-12 bg-gray-500 text-blue font-semibold rounded-xl w-full cursor-pointer transition-colors duration-300 hover:bg-blue hover:text-gray-900"
+            {...props}
+        />
     )
 }
 

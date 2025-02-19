@@ -1,15 +1,29 @@
+import { ArrowRight, Copy, Mail } from "lucide-react";
 import Button from "@/components/Button";
+import IconButton from "@/components/IconButton";
+import { InputField, InputIcon, InputRoot } from "@/components/Input";
 
 export default function Home() {
   return (
     <main>
-      <div className="text-white">Hello world!</div>
+      <Button type="submit">
+        Enviar
+        <ArrowRight/>
+      </Button>
 
-      <h1 className="text-4xl font-semibold">Hello, World!</h1>
+      <IconButton>
+        <Copy/>
+      </IconButton>
 
-      <Button text="Diego" />
-      <Button text="Michaelle" />
-      <Button text="Oi" />
+      <div>
+        <InputRoot>
+          <InputIcon>
+            <Mail className="size-5"/>
+          </InputIcon>
+
+          <InputField/>
+        </InputRoot>
+      </div>
     </main>
   );
 }
