@@ -1,9 +1,9 @@
-import React from "react";
 import Image from "next/image";
+import React from "react";
 
-import gold from '../../assets/medal-gold.svg';
-import silver from '../../assets/medal-silver.svg';
-import cooper from '../../assets/medal-cooper.svg';
+import cooper from "../../../assets/medal-cooper.svg";
+import gold from "../../../assets/medal-gold.svg";
+import silver from "../../../assets/medal-silver.svg";
 
 const Ranking = () => {
 	return (

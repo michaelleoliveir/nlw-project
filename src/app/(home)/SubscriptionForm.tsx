@@ -1,9 +1,11 @@
-"use client"
+"use client";
 
 import Button from "@/components/Button";
 import { InputField, InputIcon, InputRoot } from "@/components/Input";
+import { subscribeToEvent } from "@/http/api";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { ArrowRight, Mail, User } from "lucide-react";
+import { useRouter } from "next/navigation";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 
@@ -12,9 +14,11 @@ const subscriptionSchema = z.object({
 	email: z.string().email("Digite um email válido"),
 });
 
-type SubscriptionSchema = z.infer<typeof subscriptionSchema>
+type SubscriptionSchema = z.infer<typeof subscriptionSchema>;
 
 const SubscriptionForm = () => {
+	const router = useRouter();
+
 	const {
 		register,
 		handleSubmit,
@@ -23,8 +27,10 @@ const SubscriptionForm = () => {
 		resolver: zodResolver(subscriptionSchema),
 	});
 
-	function onSubscribe(data: SubscriptionSchema) {
-		console.log(data);
+	async function onSubscribe({ name, email }: SubscriptionSchema) {
+		const { subscriberId } = await subscribeToEvent({ name, email });
+
+		router.push(`/invite/${subscriberId}`);
 	}
 
 	return (
@@ -46,12 +52,11 @@ const SubscriptionForm = () => {
 							{...register("name")}
 							type="text"
 							placeholder="Nome completo"
+							autoComplete="off"
 						/>
 					</InputRoot>
 
-					{errors.name && (
-						<p className="text-danger">{errors.name.message}</p>
-					)}
+					{errors.name && <p className="text-danger">{errors.name.message}</p>}
 				</div>
 
 				<div className="space-y-2">
@@ -59,10 +64,7 @@ const SubscriptionForm = () => {
 						<InputIcon>
 							<Mail />
 						</InputIcon>
-						<InputField
-							{...register("email")}
-							placeholder="E-mail"
-						/>
+						<InputField {...register("email")} placeholder="E-mail" autoComplete="off" />
 					</InputRoot>
 
 					{errors.email && (

@@ -1,6 +1,6 @@
 import React from "react";
 
-import { MousePointerClick, BadgeCheck, Medal } from "lucide-react";
+import { BadgeCheck, Medal, MousePointerClick } from "lucide-react";
 
 const Stats = () => {
 	return (
