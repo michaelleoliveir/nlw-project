@@ -1,34 +1,31 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-## Getting Started
+# NLW Connect
 
-First, run the development server:
+O projeto foi desenvolvido durante a NLW Connect da Rocketseat, utilizando Next.js, TypeScript, Tailwind e Docker. Ele tem como objetivo facilitar o registro e gerenciamento de cadastros, oferecendo uma interface moderna e responsiva. A aplicação conta com formulários dinâmicos e um fluxo otimizado para cadastro de usuários.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 👩‍💻 Stack Utilizada
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Next.js**: Utilizado para criar os componentes e gerenciar as rotas.
+- **Tailwind**: Responsável pela estilização, garantindo um design harmonioso e responsivo.
+- **TypeScript**: Linguagem utilizada para trazer escalabilidade ao código.
+- **Hook-Form & ZOD**: Facilitam a validação dos formulários de forma simples e eficiente.
+- **Docker**: Usado para empacotar a API e suas dependências, garantindo que funcione em qualquer ambiente.
+## Screenshot
 
-## Learn More
+![App Screenshot](https://i.postimg.cc/MHTLDbR9/Captura-de-tela-2025-02-20-214252.png)
+## Badges
 
-To learn more about Next.js, take a look at the following resources:
+![Google Chrome](https://img.shields.io/badge/Google%20Chrome-4285F4?style=for-the-badge&logo=GoogleChrome&logoColor=white)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+![Figma](https://img.shields.io/badge/figma-%23F24E1E.svg?style=for-the-badge&logo=figma&logoColor=white)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 
-## Deploy on Vercel
+![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+![React Hook Form](https://img.shields.io/badge/React%20Hook%20Form-%23EC5990.svg?style=for-the-badge&logo=reacthookform&logoColor=white)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+![TailwindCSS](https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white)
+
+![Visual Studio Code](https://img.shields.io/badge/Visual%20Studio%20Code-0078d7.svg?style=for-the-badge&logo=visual-studio-code&logoColor=white)
