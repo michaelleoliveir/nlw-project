@@ -4,7 +4,7 @@ import logo from "../../../assets/logo.svg";
 
 import InviteLink from "./InviteLink";
 import Ranking from "./Ranking";
-import Stats from "./Stats";
+import {Stats} from "./Stats";
 
 interface InvitePageProps {
 	params: Promise<{
@@ -45,7 +45,7 @@ export default async function InvitePage(props: InvitePageProps) {
 
 					<InviteLink inviteLink={inviteLink} />
 
-					<Stats />
+					<Stats subscriberId={subscriberId} />
 				</div>
 			</div>
 
